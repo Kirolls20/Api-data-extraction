@@ -1,41 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        #title{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:blanchedalmond;
+            font-size: 40px;
+        }
+        #name-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh; /* Set the height to 100% of the viewport height for vertical centering */
+            text-align: center; /* Center text horizontally */
+        }
+    
+        #text {
+            font-size: 24px;
+            color: #fff; /* Change the color to your preference */
+        }
+    
+        #pic {
+            border-radius: 10%; /* Make the image round */
+            margin-top: 10px; /* Add some spacing between text and image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+    </style>
 </head>
 <body>
-  
     <div id="name-list">
+        <h2 id="title">Meme Generator</h2>
         <h1 id="text"></h1>
-        <img id="pic" src="" alt="" width="300" height="300">
+        <img id="pic" src="" alt="" width="400" height="350">
     </div>
-    <script>
-        // JavaScript code to make an AJAX request after page load
-        document.addEventListener('DOMContentLoaded', function () {
-    // Make an AJAX request to get the delayed names using fetch
-    fetch('/delayed_name/')
-        .then(response => response.json())
-        .then(data => {
-            var text = document.getElementById('text');
-            var image = document.getElementById('pic');
-            if (data.names) {
-                
-                // Update the list with the delayed names
-                data.names.forEach(function (item,index) {
-                        setTimeout(function () {
-                            console.log(`text:${item.name} pic:${item.pic}`);
-                            text.innerHTML = item.name
-                            image.src = item.pic
-                        }, index* 10000);
-                         // 10000 milliseconds = 10 seconds
-                });
-            }
-        })
-        .catch(error => console.error('Error:', error));
-});
-    </script>
+    <script src="{% static 'js/meme_generator.js' %}"></script>
 </body>
 
 </html>

@@ -22,6 +22,7 @@ class MemeView(TemplateView):
             names = [name['name'] for name in data]
             pics = [pic['blank'] for pic in data]
             meme_dict = {'name':names,'pic':pics}
+            
             return meme_dict
         else:
            return [],[]
@@ -33,7 +34,7 @@ def delay_name(request):
         for name,pic in zip(names['name'],names['pic']):
             # time.sleep(20)
             delayed_names.append({'name':name,'pic':pic}) 
-
+        random.shuffle(delayed_names)
         return JsonResponse({'names': delayed_names})
     else:
         return JsonResponse({'error': 'Invalid request method'})
