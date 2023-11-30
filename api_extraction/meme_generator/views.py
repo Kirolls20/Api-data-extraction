@@ -9,6 +9,9 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
 
+class HomeView(TemplateView):
+    template_name = 'home.html'
+
 @method_decorator(csrf_exempt, name='dispatch')
 class MemeView(TemplateView):
     template_name = 'meme.html'

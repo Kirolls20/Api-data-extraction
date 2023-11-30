@@ -1,0 +1,39 @@
+body{
+    box-sizing: border-box;
+    background-color:#333;
+    color:aliceblue;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.meme, .quote {
+    background-color: rgb(26, 25, 25);
+    width: 100%; /* Adjust as needed */
+    border: 1px solid #706666;
+    padding: 200px;
+    margin:5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.5s ease, font-size 0.5s ease; 
+     
+
+}
+h3 a{
+    text-decoration: none;
+    color:white;
+}
+.meme:hover {
+    background-color: rgb(65, 40, 17);
+    color: white; /* Improved color contrast for readability */
+    font-size: 24px; /* Adjust as needed */
+}
+.quote:hover {
+    background-color: #8B4513; /* SaddleBrown color for better contrast */
+    color: white; /* Improved color contrast for readability */
+    font-size: 24px; /* Adjust as needed */
+}

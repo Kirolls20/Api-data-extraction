@@ -1,0 +1,25 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 70px;
+    margin: 30; /* Remove default margin to ensure full width */
+    height: 80vh; /* Make sure the body takes at least the full height of the viewport */
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-container {
+    background-color: #833434;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#author{
+    font-weight: 700;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#968f8f;
+}
+
