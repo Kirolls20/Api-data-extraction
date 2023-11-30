@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             console.log(`text:${item.name} pic:${item.pic}`);
                             text.innerHTML = item.name
                             image.src = item.pic
-                        }, index* 10000);
-                            // 10000 milliseconds = 10 seconds
+                        }, index* 30000);
+                            // 30000 milliseconds = 30 seconds
                 });
             }
         })

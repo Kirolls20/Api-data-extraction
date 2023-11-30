@@ -3,5 +3,7 @@ from . import views
 
 urlpatterns=[
     path('meme/', views.MemeView.as_view(), name='meme'),
-    path('delayed_name/', views.delay_name, name='delayed_name'),
+    path('delayed_name/', views.delay_meme, name='delayed_name'),
+    path('quote/',views.QuoteView.as_view(),name='quote'),
+    path('quote-api/',views.api_quote,name='api_quotes'),
 ]
