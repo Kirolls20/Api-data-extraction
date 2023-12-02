@@ -37,3 +37,74 @@ h3 a{
     color: white; /* Improved color contrast for readability */
     font-size: 24px; /* Adjust as needed */
 }
+/* Add this to your stylesheet */
+
+footer {
+    background-color: #353131;
+    color: #fff;
+    padding: 20px 0;    
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-section {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  h3 {
+    color: #fff;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .copyright {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Font Awesome Icons (Assuming you're using Font Awesome) */
+  .fa {
+    font-size: 24px;
+  }
+  
+  /* Media Query for small screens */
+  @media screen and (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  }
+    

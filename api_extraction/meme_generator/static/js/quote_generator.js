@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         console.log(item.quote)
                         quote.innerHTML = item.quote;
                         author.innerHTML = item.author;
-                    }, index*28000);
+                    }, index*25000);
                 })
             }
         })

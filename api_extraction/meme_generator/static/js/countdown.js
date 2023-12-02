@@ -2,7 +2,7 @@
 //------------- countdown-----------------------------------//
      // Set the countdown duration in seconds
   // Set the countdown duration in seconds
-  const countdownDuration = 30;
+  const countdownDuration = 35;
 
 // Function to update the countdown
 function updateCountdown() {
@@ -27,7 +27,7 @@ function updateCountdown() {
         // If the countdown is over, reset the countdown
         if (distance < 0) {
             clearInterval(countdown);
-            document.getElementById("countdown").innerHTML = '0:30';
+            document.getElementById("countdown").innerHTML = '0:35';
             updateCountdown(); // Restart the countdown
         }
     }, 1000);
